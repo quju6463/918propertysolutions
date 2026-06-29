@@ -1,0 +1,4 @@
+*.zip
+.agents/
+.codex/
+.git-onedrive-placeholder-*/

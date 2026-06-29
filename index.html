@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Property Investment Guru helps New Zealand property investors test rental yield, flip offers, resale assumptions, street risk, GST, tax, holding costs and deal profit.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#121914">
+  <meta property="og:title" content="Property Investment Guru | NZ Property Calculators and Deal Checks">
+  <meta property="og:description" content="Run NZ property deal calculators, pressure-test flip offers, check profit after tax, and use practical due diligence guides before you buy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://918propertysolutions.co.nz/">
+  <meta property="og:image" content="https://918propertysolutions.co.nz/og-image.svg">
+  <meta property="og:locale" content="en_NZ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Property Investment Guru | NZ Property Calculators and Deal Checks">
+  <meta name="twitter:description" content="NZ property calculators and due diligence tools for investors, flippers, buyers and sellers.">
+  <meta name="twitter:image" content="https://918propertysolutions.co.nz/og-image.svg">
+  <title>Property Investment Guru | NZ Property Calculators and Deal Checks</title>
+  <link rel="canonical" href="https://918propertysolutions.co.nz/">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "Property Investment Guru",
+    "email": "918propertysolutionsnz@gmail.com",
+    "areaServed": "NZ",
+    "description": "New Zealand property calculators and due diligence tools for investors, flippers, buyers and sellers."
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="Property Investment Guru home">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span>PROPERTY<br>INVESTMENT <strong>GURU</strong></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a class="active" href="#market">Market pulse</a>
+      <a href="#signals">Risk radar</a>
+      <a href="street-check.html">Street check</a>
+      <a href="#calculator">Deal calculator</a>
+      <a href="flip-calculator.html">Flip calculator</a>
+      <a href="profit-calculator.html">Profit calculator</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-cta" href="#calculator">Analyse a deal <span>↗</span></a>
+  </header>
+
+  <main id="top">
+    <section class="hero" id="market">
+      <div class="hero-copy">
+        <div class="eyebrow"><span></span> Deal evidence intelligence</div>
+        <h1>Find the pressure,<br><em>then test the deal.</em></h1>
+        <p>Use local supply, price trends, lending costs, and resale assumptions to see whether a property still works when the market gets less forgiving.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#signals">Explore risk radar <span>↗</span></a>
+          <a class="text-link" href="#calculator">Run the numbers <span>→</span></a>
+        </div>
+        <div class="hero-meta">
+          <div><strong>Supply</strong><span>vendor pressure</span></div>
+          <div><strong>Comps</strong><span>price reality check</span></div>
+          <div><strong>Yield</strong><span>deal stress test</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="visual-topline">
+          <span>RENT RANGE LENS / TENANCY SERVICES</span>
+          <span class="live-dot">STORED EXAMPLE</span>
+        </div>
+        <div class="rental-data-panel" aria-label="Rental data snapshot from Tenancy Services">
+          <div class="rental-panel-head">
+            <label for="rentAreaSelect">Choose area</label>
+            <select id="rentAreaSelect">
+              <option value="wellington" selected>Wellington</option>
+              <option value="lower-hutt">Lower Hutt</option>
+              <option value="porirua">Porirua</option>
+              <option value="upper-hutt">Upper Hutt</option>
+              <option value="kapiti">Kapiti Coast</option>
+              <option value="avondale">Avondale, Auckland</option>
+            </select>
+            <strong id="rentAreaName">Wellington</strong>
+            <small id="rentDataWindow">Stored example - verify before relying</small>
+          </div>
+          <div class="rent-range">
+            <div class="rent-marker lower" id="rentLowerBar" style="--value: 62%;">
+              <span>Lower</span>
+              <strong id="rentLowerValue">$560</strong>
+            </div>
+            <div class="rent-marker median" id="rentMedianBar" style="--value: 74%;">
+              <span>Median</span>
+              <strong id="rentMedianValue">$670</strong>
+            </div>
+            <div class="rent-marker upper" id="rentUpperBar" style="--value: 90%;">
+              <span>Upper</span>
+              <strong id="rentUpperValue">$820</strong>
+            </div>
+          </div>
+          <div class="rental-metrics">
+            <div><span>Active bonds</span><strong id="rentBondValue">Check source</strong></div>
+            <div><span>Data window</span><strong>6 months</strong></div>
+          </div>
+          <p id="rentPanelNote">Choose an area to load the stored rent range. Use Tenancy Services to verify the exact suburb and latest monthly figures before relying on yield.</p>
+          <p class="source-note">Reference: Tenancy Services Market Rent. These are stored example ranges, not a live lookup. Refresh from the official source before publication or before relying on yield.</p>
+          <a href="https://www.tenancy.govt.nz/rent-bond-and-bills/market-rent/" target="_blank" rel="noopener">Check your suburb on Tenancy Services</a>
+        </div>
+        <div class="visual-footer">
+          <span>Stored example: verify against current source data</span>
+          <div class="progress"><i></i></div>
+          <strong>RENT</strong>
+        </div>
+      </div>
+    </section>
+
+    <section class="ticker" aria-label="Market indicators">
+      <span class="ticker-title">Market tape</span>
+      <div><b>WLG</b><span>1,499 sales</span><i class="neutral">Scanning</i></div>
+      <div><b>LHT</b><span>748 sales</span><i class="up">Complete</i></div>
+      <div><b>UHT</b><span>Queued</span><i class="neutral">Pending</i></div>
+      <div><b>POR</b><span>Queued</span><i class="neutral">Pending</i></div>
+      <div><b>KAP</b><span>Queued</span><i class="neutral">Pending</i></div>
+    </section>
+    <div class="source-strip">Market tape is an internal workflow tracker, not an official market dataset. Use it as a status indicator only.</div>
+
+    <section class="section intelligence-section" id="intelligence">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow eyebrow-dark"><span></span> Investor market pulse</div>
+          <h2>Turn market movement<br>into deal signals.</h2>
+        </div>
+        <p>Useful public data points from NZ property and lending sources, translated into what an investor should check before making an offer.</p>
+      </div>
+
+      <div class="intelligence-grid">
+        <article class="pulse-card highlight">
+          <span class="source-label">realestate.co.nz / Residential sale</span>
+          <strong>43,351</strong>
+          <h3>NZ residential listings on market</h3>
+          <p>A broad supply pool gives buyers more room to compare listings, watch stale stock, and negotiate when a vendor needs certainty.</p>
+          <small class="source-note">Example figure captured from realestate.co.nz residential sale search. Refresh manually before publication or replace with a scheduled update pipeline.</small>
+          <a href="https://www.realestate.co.nz/residential/sale" target="_blank" rel="noopener">View source</a>
+        </article>
+
+        <article class="pulse-card">
+          <span class="source-label">Tenancy Services + realestate.co.nz</span>
+          <h3>Rent range before yield</h3>
+          <p>Rental numbers only help when they are local. Check the weekly rent range and active bond sample, then compare it with suburb sale prices and current listings before trusting the yield.</p>
+          <ul>
+            <li>Use median rent for the base case.</li>
+            <li>Use lower quartile rent for a cautious case.</li>
+            <li>Compare rent yield against local sale evidence.</li>
+          </ul>
+          <small class="source-note">Sources: Tenancy Services Market Rent for rent ranges and active bonds; realestate.co.nz Market Insights for local price and supply context.</small>
+          <a href="https://www.tenancy.govt.nz/rent-bond-and-bills/market-rent/" target="_blank" rel="noopener">Check market rent</a>
+        </article>
+
+        <article class="pulse-card">
+          <span class="source-label">mortgages.co.nz / Mortgage rates</span>
+          <h3>Funding cost is a deal filter</h3>
+          <p>Mortgage rates are shown as a reference snapshot and may include lender criteria or specials. For a flip, test interest sensitivity before the offer, not after settlement.</p>
+          <ul>
+            <li>Stress-test finance at a higher rate.</li>
+            <li>Separate interest from other holding costs.</li>
+            <li>Check fixed, floating and interest-only options.</li>
+          </ul>
+          <small class="source-note">Source: mortgages.co.nz mortgage-rate reference information. Confirm directly with adviser or lender.</small>
+          <a href="https://mortgages.co.nz/mortgage-rates/" target="_blank" rel="noopener">Check rate context</a>
+        </article>
+
+        <article class="pulse-card action-card">
+          <span class="source-label">Investor takeaway</span>
+          <h3>What to do with the data</h3>
+          <p>Use listing supply to find negotiation pressure, suburb insights to validate resale assumptions, and lending data to protect your holding-cost budget.</p>
+          <small class="source-note">Interpretation based on the linked rental, listing, suburb-insight and lending sources.</small>
+          <div class="action-list">
+            <span>1. Pick suburb comparables</span>
+            <span>2. Test resale against local evidence</span>
+            <span>3. Run offer and profit calculators</span>
+          </div>
+          <a href="street-check.html">Open street check</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="section signals-section" id="signals">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow eyebrow-dark"><span></span> Investor risk radar</div>
+          <h2>Know the pressure points<br>before you offer.</h2>
+        </div>
+        <p>A good deal is not just a cheap purchase price. It needs rent support, lending buffer, compliance awareness, resale evidence, and a clear fallback plan.</p>
+      </div>
+
+      <div class="signal-grid">
+        <article class="feature-card">
+          <div class="card-tag">Offer discipline</div>
+          <div class="feature-number">5</div>
+          <h3>Checks before the number feels safe</h3>
+          <p>Run each deal through five pressure points before relying on the headline margin. The aim is simple: find the weak assumption while there is still time to change the offer.</p>
+          <div class="confidence">
+            <span>DEAL READINESS</span>
+            <div><i></i></div>
+            <strong>CHECK</strong>
+          </div>
+        </article>
+
+        <article class="coverage-card">
+          <div class="card-top">
+            <div>
+              <span class="label">Investor checklist</span>
+              <h3>Where deals usually break</h3>
+            </div>
+            <span class="status-pill">Before offer</span>
+          </div>
+          <div class="council-list">
+            <div class="council-row">
+              <span class="council-name"><i class="complete"></i>Rent demand</span>
+              <span class="bar"><i style="width:92%"></i></span>
+              <strong>Rent</strong><small>support</small>
+            </div>
+            <div class="council-row">
+              <span class="council-name"><i class="complete"></i>Finance buffer</span>
+              <span class="bar"><i style="width:84%"></i></span>
+              <strong>Rates</strong><small>stress</small>
+            </div>
+            <div class="council-row">
+              <span class="council-name"><i class="scanning"></i>Healthy homes and consent risk</span>
+              <span class="bar"><i style="width:70%"></i></span>
+              <strong>Rules</strong><small>check</small>
+            </div>
+            <div class="council-row">
+              <span class="council-name"><i class="scanning"></i>Resale depth</span>
+              <span class="bar"><i style="width:66%"></i></span>
+              <strong>Comps</strong><small>evidence</small>
+            </div>
+            <div class="council-row">
+              <span class="council-name"><i class="complete"></i>Exit plan</span>
+              <span class="bar"><i style="width:88%"></i></span>
+              <strong>Sell/rent</strong><small>fallback</small>
+            </div>
+          </div>
+          <div class="card-foot"><span>Use suburb insights, current listings and lender rates</span><span>Then test the calculators</span></div>
+          <p class="source-note card-source">Checklist is investor guidance based on public source categories listed below, not a market score.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section short-stay-section" id="short-stay">
+      <div class="short-stay-copy">
+        <div class="eyebrow eyebrow-dark"><span></span> Short-term accommodation option</div>
+        <h2>Could short stays<br>change the deal?</h2>
+        <p>For some properties, short-term accommodation can be another option alongside long-term rental or resale. It may suit visiting families, work trips, relocation stays, or owners testing whether a furnished property can earn more than a standard tenancy.</p>
+        <small class="source-note">Promotional link supplied by 918 Property Solutions. Short-term accommodation returns depend on occupancy, nightly rates, cleaning, platform fees, management, council rules, tax and seasonal demand.</small>
+        <div class="short-stay-actions">
+          <a class="button button-primary" href="https://waterview-spacious-bliss.pages.dev/" target="_blank" rel="noopener">View Waterview Spacious Bliss <span>&rarr;</span></a>
+          <a class="text-link dark-link" href="contact.html">Discuss short-stay potential <span>&rarr;</span></a>
+        </div>
+      </div>
+      <aside class="ad-card">
+        <span class="source-label">Featured accommodation</span>
+        <h3>Waterview Spacious Bliss</h3>
+        <p>A promoted short-stay accommodation page for guests or investors wanting to understand how a furnished stay can be positioned.</p>
+        <div class="ad-points">
+          <span>Guest stays</span>
+          <span>Relocation</span>
+          <span>Portfolio option</span>
+        </div>
+        <a href="https://waterview-spacious-bliss.pages.dev/" target="_blank" rel="noopener">Open accommodation page</a>
+      </aside>
+    </section>
+
+    <section class="section calculator-section" id="calculator">
+      <div class="calculator-intro">
+        <div class="eyebrow"><span></span> Deal calculator</div>
+        <h2>Would you buy it?</h2>
+        <p>Quickly test the cash flow on a prospective rental. Adjust the assumptions and see the result move in real time.</p>
+        <div class="rule"></div>
+        <p class="fine-print">This is an indicative estimate, not financial advice. Rates, tax, vacancies, and maintenance can materially change actual returns.</p>
+        <a class="flip-inline-cta" href="flip-calculator.html"><span>Planning a property flip?</span><strong>Calculate your maximum offer →</strong></a>
+      </div>
+
+      <div class="calculator">
+        <div class="calc-inputs">
+          <label>
+            <span>Purchase price <b id="priceLabel">$750,000</b></span>
+            <input id="price" type="range" min="350000" max="1500000" step="10000" value="750000">
+          </label>
+          <label>
+            <span>Deposit <b id="depositLabel">30%</b></span>
+            <input id="deposit" type="range" min="10" max="60" step="1" value="30">
+          </label>
+          <label>
+            <span>Weekly rent <b id="rentLabel">$720</b></span>
+            <input id="rent" type="range" min="350" max="1500" step="10" value="720">
+          </label>
+          <label>
+            <span>Interest rate <b id="rateLabel">6.20%</b></span>
+            <input id="rate" type="range" min="3" max="10" step="0.05" value="6.2">
+          </label>
+        </div>
+        <div class="calc-output">
+          <span class="label">Indicative annual cash flow</span>
+          <strong id="cashflow">−$3,174</strong>
+          <span class="result-status" id="resultStatus">Top-up required</span>
+          <div class="metric-grid">
+            <div><span>Gross yield</span><b id="yield">4.99%</b></div>
+            <div><span>Loan value</span><b id="loan">$525,000</b></div>
+            <div><span>Weekly position</span><b id="weekly">−$61</b></div>
+            <div><span>Rent needed</span><b id="needed">$781/wk</b></div>
+          </div>
+          <p>Assumes interest-only lending and annual operating costs equal to 22% of gross rent.</p>
+          <p class="source-note calc-source">Calculator uses user-selected inputs and a simplified 22% operating-cost assumption. It is not sourced market advice.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section source-reference" id="sources">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow eyebrow-dark"><span></span> Sources and assumptions</div>
+          <h2>Where the information<br>comes from.</h2>
+        </div>
+          <p>Market figures, rent ranges and lending context are stored examples in this static site. Refresh them before public release, or connect the site to a scheduled update pipeline.</p>
+      </div>
+      <div class="source-grid">
+        <article>
+          <span>Rental data</span>
+          <h3>Tenancy Services Market Rent</h3>
+          <p>Used as the reference source for weekly rent ranges, active bonds and the six-month market-rent data window. Dropdown rent figures are stored examples and should be refreshed from Tenancy Services before publication.</p>
+          <a href="https://www.tenancy.govt.nz/rent-bond-and-bills/market-rent/" target="_blank" rel="noopener">Open source</a>
+        </article>
+        <article>
+          <span>Listings and suburb context</span>
+          <h3>realestate.co.nz</h3>
+          <p>Used for residential listing supply and suburb-level context such as listing prices, sale prices, rent, trends and local supply.</p>
+          <a href="https://www.realestate.co.nz/insights" target="_blank" rel="noopener">Open insights</a>
+        </article>
+        <article>
+          <span>Lending context</span>
+          <h3>mortgages.co.nz</h3>
+          <p>Used for mortgage-rate context. Rates are reference information only and should be confirmed with a lender or mortgage adviser.</p>
+          <a href="https://mortgages.co.nz/mortgage-rates/" target="_blank" rel="noopener">Open rates</a>
+        </article>
+        <article>
+          <span>Tax assumptions</span>
+          <h3>Inland Revenue</h3>
+          <p>GST and company-tax defaults in the flip calculators reference Inland Revenue settings. Property tax treatment can vary by facts, intent and GST status.</p>
+          <a href="https://www.ird.govt.nz/income-tax/income-tax-for-businesses-and-organisations/tax-rates-for-businesses" target="_blank" rel="noopener">Open IRD tax rates</a>
+        </article>
+        <article>
+          <span>Promotional accommodation link</span>
+          <h3>Waterview Spacious Bliss</h3>
+          <p>Used as a featured short-term accommodation example supplied by 918 Property Solutions. It is not a market-data source.</p>
+          <a href="https://waterview-spacious-bliss.pages.dev/" target="_blank" rel="noopener">Open accommodation page</a>
+        </article>
+      </div>
+    </section>
+
+    <section class="closing">
+      <span class="label">The investor's edge</span>
+      <h2>Better questions.<br><em>Better property decisions.</em></h2>
+      <a class="button button-light" href="#top">Back to market pulse <span>↑</span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand brand-footer" href="#top">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span>PROPERTY INVESTMENT <strong>GURU</strong></span>
+    </a>
+    <p>Independent property intelligence for smarter decisions.</p>
+    <span>WELLINGTON, NEW ZEALAND</span>
+  </footer>
+
+  <script src="script.js?v=source-notes-1"></script>
+</body>
+</html>

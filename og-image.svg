@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Property Investment Guru preview">
+  <rect width="1200" height="630" fill="#121914"/>
+  <circle cx="985" cy="130" r="260" fill="#86e8ba" opacity=".12"/>
+  <g transform="translate(78 86)">
+    <path d="M0 54h18V20H0v34Zm30 0h18V0H30v54Zm30 0h18V-22H60v76Z" fill="#c8ff47" transform="skewY(-18)"/>
+    <text x="0" y="140" fill="#f8f5eb" font-family="Arial, sans-serif" font-size="72" font-weight="700">Property Investment Guru</text>
+    <text x="0" y="225" fill="#c8ff47" font-family="Arial, sans-serif" font-size="46">NZ property calculators and deal checks</text>
+    <text x="0" y="310" fill="#d9dfd3" font-family="Arial, sans-serif" font-size="30">Flip offers • Profit after tax • Street due diligence • Rental yield</text>
+  </g>
+  <rect x="78" y="500" width="360" height="2" fill="#c8ff47"/>
+</svg>

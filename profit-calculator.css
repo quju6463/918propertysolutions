@@ -1,0 +1,18 @@
+.finance-spacer { margin-top: 34px !important; }
+.profit-result .result-sticky { justify-content: center; }
+.profit-steps { display: flex; flex-direction: column; gap: 9px; }
+.profit-step { display: grid; grid-template-columns: 30px 1fr; gap: 12px; align-items: start; padding: 11px 0; border-bottom: 1px solid rgba(255,255,255,.12); }
+.profit-step > span { width: 26px; height: 26px; display: grid; place-items: center; border: 1px solid rgba(200,255,71,.4); border-radius: 50%; color: var(--acid); font: 600 11px var(--mono); }
+.profit-step p { display: flex; justify-content: space-between; gap: 18px; margin: 0; color: rgba(255,255,255,.78); font: 500 13px/1.45 var(--sans); }
+.profit-step b { font-weight: 600; }
+.profit-step small { flex: 0 0 auto; color: #fff; font: 500 13px var(--mono); }
+.profit-step.subtotal { margin-top: 8px; padding: 15px 0; border-top: 1px solid rgba(200,255,71,.24); border-bottom: 1px solid rgba(200,255,71,.24); }
+.profit-step.subtotal small { color: var(--acid); font-size: 15px; }
+.profit-step.gst-step small.is-refund { color: var(--mint); }
+.profit-step.gst-step small.is-payable { color: var(--orange); }
+.result-alert.is-loss { border-color: rgba(255,121,87,.25); background: rgba(255,121,87,.07); }
+.result-alert.is-loss i { background: var(--orange); }
+.result-alert.is-loss strong { color: var(--orange); }
+@media (max-width: 700px) {
+  .profit-step p { flex-direction: column; gap: 4px; }
+}

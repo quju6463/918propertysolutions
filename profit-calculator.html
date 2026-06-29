@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NZ property profit calculator: estimate flip profit after purchase price, resale value, GST, income tax, renovation budget, finance and holding costs.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#121914">
+  <meta property="og:title" content="NZ Property Profit Calculator | Property Investment Guru">
+  <meta property="og:description" content="Estimate NZ property flip profit after GST, tax, sale costs, holding costs, finance and renovation budget.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://918propertysolutions.co.nz/profit-calculator.html">
+  <meta property="og:image" content="https://918propertysolutions.co.nz/og-image.svg">
+  <meta property="og:locale" content="en_NZ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://918propertysolutions.co.nz/og-image.svg">
+  <title>NZ Property Profit Calculator | Property Investment Guru</title>
+  <link rel="canonical" href="https://918propertysolutions.co.nz/profit-calculator.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="flip-calculator.css">
+  <link rel="stylesheet" href="profit-calculator.css">
+</head>
+<body class="flip-page profit-page">
+  <header class="site-header flip-header">
+    <a class="brand" href="index.html" aria-label="Property Investment Guru home">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span>PROPERTY<br>INVESTMENT <strong>GURU</strong></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html#market">Market pulse</a>
+      <a href="street-check.html">Street check</a>
+      <a href="index.html#calculator">Rental calculator</a>
+      <a href="flip-calculator.html">Offer calculator</a>
+      <a class="active" href="profit-calculator.html">Profit calculator</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-cta" href="#profit-result">See profit <span>↓</span></a>
+  </header>
+
+  <main>
+    <section class="flip-hero">
+      <div class="flip-hero-copy">
+        <div class="eyebrow"><span></span> Property flipper toolkit</div>
+        <h1>Know your costs.<br><em>See your profit.</em></h1>
+        <p>Run the deal forward from purchase price to resale value, then follow each step as GST, project costs, finance, and income tax reduce the final profit.</p>
+      </div>
+      <div class="formula-card">
+        <span class="label">The forward deal equation</span>
+        <div class="formula">
+          <span>Net resale</span><b>-</b><span>Net purchase</span><b>-</b>
+          <span>Project costs</span><b>=</b><strong>Profit after tax</strong>
+        </div>
+        <p>Designed to show where the money goes, not just the final number.</p>
+      </div>
+    </section>
+
+    <section class="flip-workbench">
+      <form class="flip-form" id="profitForm">
+        <div class="form-heading">
+          <div><span class="step">01 / Inputs</span><h2>Run the deal</h2></div>
+          <button type="reset" class="reset-button">Reset defaults</button>
+        </div>
+
+        <fieldset class="deal-identity">
+          <legend>Property deal</legend>
+          <div class="field-grid">
+            <label><span>Property address <small>Used to identify and compare this deal</small></span><div class="text-field"><input id="propertyAddress" type="text" placeholder="e.g. 24 Example Street, Lower Hutt"></div></label>
+            <label><span>Deal name or note <small>Optional short label</small></span><div class="text-field"><input id="dealName" type="text" placeholder="e.g. Buy at $520k, resell at $950k"></div></label>
+          </div>
+          <div class="save-actions">
+            <button class="save-button" id="saveDeal" type="button">Save this deal</button>
+            <button class="new-deal-button" id="newDeal" type="button">Start new deal</button>
+            <span id="saveMessage" aria-live="polite">Saved deals stay in this browser.</span>
+          </div>
+        </fieldset>
+
+        <fieldset class="tax-fieldset">
+          <legend>GST and tax</legend>
+          <div class="toggle-row">
+            <div><strong>GST-registered property trader</strong><span>Calculates output GST on sale and credits on GST-inclusive project costs.</span></div>
+            <label class="switch"><input id="gstRegistered" type="checkbox" aria-label="GST-registered property trader" checked><span></span></label>
+          </div>
+          <div class="toggle-row" id="purchaseGstRow">
+            <div><strong>Purchase price includes claimable GST</strong><span>Removes claimable GST from the purchase cost before calculating profit.</span></div>
+            <label class="switch"><input id="purchaseGstClaimable" type="checkbox" aria-label="Purchase price includes claimable GST"><span></span></label>
+          </div>
+          <p class="source-note form-source">Reference: Inland Revenue GST guidance. GST on property can depend on registration, land use and whether a transaction is zero-rated.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Purchase and resale</legend>
+          <div class="field-grid">
+            <label class="money-field"><span>Purchase price <small>What you expect to pay</small></span><div><i>$</i><input id="purchasePrice" type="number" min="0" step="1000" value="520000"></div></label>
+            <label class="money-field"><span>Expected resale value <small>Including GST, if applicable</small></span><div><i>$</i><input id="resaleValue" type="number" min="0" step="1000" value="950000"></div></label>
+            <label><span>Income tax rate <small>Defaults to NZ company rate; editable</small></span><div class="suffix-field"><input id="incomeTaxRate" type="number" min="0" max="90" step="0.5" value="28"><i>%</i></div></label>
+            <label><span>Estimated project length <small>Used for monthly costs</small></span><div class="suffix-field"><input id="projectMonths" type="number" min="1" max="60" step="1" value="6"><i>months</i></div></label>
+          </div>
+          <p class="source-note form-source">Default income tax rate references Inland Revenue's 28% rate for most companies. Purchase price, resale value and timing are user-entered assumptions.</p>
+        </fieldset>
+
+        <fieldset>
+          <legend>Renovation costs</legend>
+          <div class="field-grid">
+            <label class="select-field"><span>Renovation budget method <small>Enter one total or build an itemised budget</small></span><div><select id="renovationBudgetMode"><option value="total">Total renovation budget</option><option value="itemised">Itemised renovation budget</option></select></div></label>
+            <label class="money-field" id="renovationTotalField"><span>Renovation budget <small>Including GST</small></span><div><i>$</i><input id="renovationCost" type="number" min="0" step="1000" value="120000"></div></label>
+            <label><span>Renovation contingency <small>Percentage of renovation budget</small></span><div class="suffix-field"><input id="contingencyRate" type="number" min="0" max="100" step="1" value="10"><i>%</i></div></label>
+          </div>
+          <div class="itemised-renovation is-hidden" id="itemisedRenovation">
+            <div class="itemised-heading">
+              <div><strong>Itemised renovation planner</strong><span>All amounts include GST</span></div>
+              <p>Subtotal <b id="renovationSubtotal">$0</b></p>
+            </div>
+            <div class="field-grid renovation-grid">
+              <label class="money-field"><span>Design and consents</span><div><i>$</i><input id="renoDesign" type="number" min="0" step="500" value="5000"></div></label>
+              <label class="money-field"><span>Demolition and disposal</span><div><i>$</i><input id="renoDemolition" type="number" min="0" step="500" value="7000"></div></label>
+              <label class="money-field"><span>Building and carpentry</span><div><i>$</i><input id="renoBuilding" type="number" min="0" step="1000" value="28000"></div></label>
+              <label class="money-field"><span>Plumbing</span><div><i>$</i><input id="renoPlumbing" type="number" min="0" step="500" value="8000"></div></label>
+              <label class="money-field"><span>Electrical</span><div><i>$</i><input id="renoElectrical" type="number" min="0" step="500" value="7000"></div></label>
+              <label class="money-field"><span>Kitchen</span><div><i>$</i><input id="renoKitchen" type="number" min="0" step="1000" value="18000"></div></label>
+              <label class="money-field"><span>Bathrooms</span><div><i>$</i><input id="renoBathrooms" type="number" min="0" step="1000" value="16000"></div></label>
+              <label class="money-field"><span>Flooring</span><div><i>$</i><input id="renoFlooring" type="number" min="0" step="500" value="7000"></div></label>
+              <label class="money-field"><span>Painting and decorating</span><div><i>$</i><input id="renoPainting" type="number" min="0" step="500" value="9000"></div></label>
+              <label class="money-field"><span>Exterior and roofing</span><div><i>$</i><input id="renoExterior" type="number" min="0" step="500" value="7000"></div></label>
+              <label class="money-field"><span>Landscaping</span><div><i>$</i><input id="renoLandscaping" type="number" min="0" step="500" value="4000"></div></label>
+              <label class="money-field"><span>Other renovation costs</span><div><i>$</i><input id="renoOther" type="number" min="0" step="500" value="4000"></div></label>
+            </div>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Other project costs</legend>
+          <div class="field-grid">
+            <label class="money-field"><span>Legal and conveyancing <small>Including GST</small></span><div><i>$</i><input id="legalCost" type="number" min="0" step="100" value="4000"></div></label>
+            <label class="money-field"><span>LIM and council records <small>Including GST</small></span><div><i>$</i><input id="limCost" type="number" min="0" step="100" value="500"></div></label>
+            <label class="money-field"><span>Builder's report <small>Including GST</small></span><div><i>$</i><input id="buildersReportCost" type="number" min="0" step="100" value="900"></div></label>
+            <label class="money-field"><span>Other acquisition costs <small>Valuation, testing, specialist advice</small></span><div><i>$</i><input id="otherAcquisitionCost" type="number" min="0" step="100" value="1000"></div></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Costs of sale</legend>
+          <div class="field-grid">
+            <label class="select-field"><span>Agency fee method <small>Percentage or fixed fee</small></span><div><select id="agencyFeeMode"><option value="percent">Percentage of resale</option><option value="fixed">Fixed dollar fee</option></select></div></label>
+            <label id="agencyPercentField"><span>Agency commission <small>Percentage of resale value</small></span><div class="suffix-field"><input id="sellingRate" type="number" min="0" max="20" step="0.1" value="3"><i>%</i></div></label>
+            <label class="money-field is-hidden" id="agencyFixedField"><span>Fixed agency fee <small>Including GST</small></span><div><i>$</i><input id="sellingFixed" type="number" min="0" step="500" value="25000"></div></label>
+            <label class="money-field"><span>Marketing and photography <small>Including GST</small></span><div><i>$</i><input id="marketingCost" type="number" min="0" step="100" value="3500"></div></label>
+            <label class="money-field"><span>Staging and presentation <small>Including GST</small></span><div><i>$</i><input id="stagingCost" type="number" min="0" step="100" value="4500"></div></label>
+            <label class="money-field"><span>Other costs of sale <small>Auction, cleaning, moving, certificates</small></span><div><i>$</i><input id="otherSaleCost" type="number" min="0" step="100" value="1500"></div></label>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Holding and finance</legend>
+          <p class="fieldset-note">Use monthly costs when timing matters, or totals when you already know the full allowance.</p>
+          <div class="field-grid">
+            <label class="select-field"><span>Holding cost method <small>Monthly or total</small></span><div><select id="holdingCostMode"><option value="monthly">Monthly itemised costs</option><option value="total">Total holding cost</option></select></div></label>
+            <label class="money-field is-hidden" id="holdingTotalField"><span>Total holding costs <small>Including GST where applicable</small></span><div><i>$</i><input id="holdingTotalCost" type="number" min="0" step="500" value="7500"></div></label>
+          </div>
+          <div class="field-grid" id="holdingMonthlyFields">
+            <label class="money-field"><span>Council rates per month <small>Including GST</small></span><div><i>$</i><input id="ratesMonthly" type="number" min="0" step="50" value="450"></div></label>
+            <label class="money-field"><span>Insurance per month <small>Including GST</small></span><div><i>$</i><input id="insuranceMonthly" type="number" min="0" step="50" value="250"></div></label>
+            <label class="money-field"><span>Utilities per month <small>Power, water, internet</small></span><div><i>$</i><input id="utilitiesMonthly" type="number" min="0" step="50" value="250"></div></label>
+            <label class="money-field"><span>Security per month <small>Alarms, monitoring, temporary fencing</small></span><div><i>$</i><input id="securityMonthly" type="number" min="0" step="50" value="100"></div></label>
+            <label class="money-field"><span>Other holding costs per month <small>Body corporate, lawns, inspections</small></span><div><i>$</i><input id="otherHoldingMonthly" type="number" min="0" step="50" value="200"></div></label>
+          </div>
+          <div class="field-grid finance-spacer">
+            <label class="select-field"><span>Finance cost method <small>Monthly or total</small></span><div><select id="financeCostMode"><option value="monthly">Monthly interest plus fees</option><option value="total">Total finance cost</option></select></div></label>
+            <label class="money-field is-hidden" id="financeTotalField"><span>Total finance and interest cost <small>No GST credit assumed</small></span><div><i>$</i><input id="financeTotalCost" type="number" min="0" step="500" value="29500"></div></label>
+          </div>
+          <div class="field-grid" id="financeMonthlyFields">
+            <label class="money-field"><span>Interest cost per month <small>No GST credit; multiplied by project length</small></span><div><i>$</i><input id="interestMonthly" type="number" min="0" step="100" value="4500"></div></label>
+            <label class="money-field"><span>Loan and finance fees <small>One-off finance costs</small></span><div><i>$</i><input id="financeFees" type="number" min="0" step="100" value="2500"></div></label>
+          </div>
+        </fieldset>
+      </form>
+
+      <aside class="offer-result profit-result" id="profit-result">
+        <div class="result-sticky">
+          <span class="step">02 / Profit result</span>
+          <p class="result-kicker">Estimated profit after tax</p>
+          <strong id="afterTaxProfit">$0</strong>
+          <span class="offer-ratio" id="profitMargin">0% of resale value</span>
+          <div class="offer-rule"></div>
+          <div class="profit-steps">
+            <div class="profit-step"><span>1</span><p><b>Start with resale value, GST inclusive</b><small id="stepResale">$0</small></p></div>
+            <div class="profit-step"><span>2</span><p><b>Less purchase price, GST inclusive</b><small id="stepPurchase">-$0</small></p></div>
+            <div class="profit-step"><span>3</span><p><b>Less renovation and contingency, GST inclusive</b><small id="stepRenovation">-$0</small></p></div>
+            <div class="profit-step"><span>4</span><p><b>Less due diligence and sale costs, GST inclusive</b><small id="stepTransaction">-$0</small></p></div>
+            <div class="profit-step"><span>5</span><p><b>Less holding and finance costs</b><small id="stepCarry">-$0</small></p></div>
+            <div class="profit-step subtotal"><span>=</span><p><b>Profit before GST and income tax</b><small id="profitBeforeGstTax">$0</small></p></div>
+            <div class="profit-step gst-step"><span>6</span><p><b id="stepGstLabel">GST payable/refund</b><small id="stepGstWashup">$0</small></p></div>
+            <div class="profit-step subtotal"><span>=</span><p><b>Taxable profit before income tax</b><small id="taxableProfit">$0</small></p></div>
+            <div class="profit-step"><span>7</span><p><b>Less income tax provision</b><small id="incomeTaxOutput">-$0</small></p></div>
+          </div>
+          <div class="tax-summary">
+            <div><span>GST credits available</span><b id="gstCreditsOutput">$0</b></div>
+            <div><span>GST on sale</span><b id="saleGstSummary">$0</b></div>
+            <div><span>Total cash costs</span><b id="totalCostsOutput">$0</b></div>
+            <div><span>Return on cash cost</span><b id="roiOutput">0%</b></div>
+          </div>
+          <div class="result-alert" id="resultAlert">
+            <i></i><p><strong>Profit estimate ready.</strong><span>Follow the numbered steps to see where the money goes.</span></p>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <section class="saved-deals" id="saved-deals">
+      <div class="saved-deals-heading">
+        <div>
+          <span class="step">03 / Saved workspace</span>
+          <h2>Compare profit scenarios</h2>
+          <p>Save several properties, then compare expected profit, GST, costs, project length, and return side by side.</p>
+        </div>
+        <span class="saved-count" id="savedCount">0 saved deals</span>
+      </div>
+      <div class="empty-deals" id="emptyDeals">
+        <strong>No saved deals yet.</strong>
+        <span>Add an address above and save the current calculation to begin comparing profit scenarios.</span>
+      </div>
+      <div class="comparison-wrap is-hidden" id="comparisonWrap">
+        <table class="comparison-table">
+          <thead><tr id="comparisonHead"><th>Metric</th></tr></thead>
+          <tbody id="comparisonBody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="flip-notes">
+      <span class="label">Companion calculator</span>
+      <h2>Need to work backward?</h2>
+      <p>If you know the profit you want to keep and need to find the maximum purchase offer, use the offer calculator instead.</p>
+      <div class="calculator-source-list">
+        <a href="https://www.ird.govt.nz/gst" target="_blank" rel="noopener">GST reference: Inland Revenue</a>
+        <a href="https://www.ird.govt.nz/income-tax/income-tax-for-businesses-and-organisations/tax-rates-for-businesses" target="_blank" rel="noopener">Company tax reference: Inland Revenue</a>
+        <span>Costs, purchase price, resale value, project length and finance costs are user-entered assumptions.</span>
+      </div>
+      <a class="button button-light" href="flip-calculator.html">Open offer calculator <span>-></span></a>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand brand-footer" href="index.html"><span class="brand-mark"><i></i><i></i><i></i></span><span>PROPERTY INVESTMENT <strong>GURU</strong></span></a>
+    <p>Independent property intelligence for smarter decisions.</p><span>WELLINGTON, NEW ZEALAND</span>
+  </footer>
+  <script src="profit-calculator.js"></script>
+</body>
+</html>

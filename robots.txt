@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://918propertysolutions.co.nz/sitemap.xml

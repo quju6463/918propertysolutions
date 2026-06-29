@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Use the NZ Street Check guide to assess community fit, schools, safety, hazards, transport, rent demand and market evidence before buying property.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#121914">
+  <meta property="og:title" content="Street Check NZ | Property Due Diligence Guide">
+  <meta property="og:description" content="A practical checklist for checking NZ streets, suburbs, hazards, schools, rents, safety and resale evidence before you buy.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://918propertysolutions.co.nz/street-check.html">
+  <meta property="og:image" content="https://918propertysolutions.co.nz/og-image.svg">
+  <meta property="og:locale" content="en_NZ">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://918propertysolutions.co.nz/og-image.svg">
+  <title>Street Check NZ | Property Due Diligence Guide</title>
+  <link rel="canonical" href="https://918propertysolutions.co.nz/street-check.html">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="street-page">
+  <header class="site-header street-header">
+    <a class="brand" href="index.html" aria-label="Property Investment Guru home">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span>PROPERTY<br>INVESTMENT <strong>GURU</strong></span>
+    </a>
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="index.html#market">Market pulse</a>
+      <a class="active" href="street-check.html">Street check</a>
+      <a href="index.html#calculator">Deal calculator</a>
+      <a href="flip-calculator.html">Flip calculator</a>
+      <a href="profit-calculator.html">Profit calculator</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <a class="header-cta" href="#street-score">Start check <span>&darr;</span></a>
+  </header>
+
+  <main id="top">
+    <section class="street-hero">
+      <div class="street-hero-copy">
+        <div class="eyebrow"><span></span> Street and suburb due diligence</div>
+        <h1>Is this a good street<br><em>to live on?</em></h1>
+        <p>A practical NZ checklist for property buyers and investors. It does not pretend to know everything automatically; it shows what to check, where to check it, and how to think about the result.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#street-score">Build check plan <span>&darr;</span></a>
+          <a class="text-link" href="#street-sources">View data sources <span>&rarr;</span></a>
+        </div>
+      </div>
+      <aside class="street-summary-card">
+        <span class="label">Honest method</span>
+        <h2>Use data to ask better questions.</h2>
+        <p>Most NZ data is not available as a clean street-by-street public feed. Census, rent, Police and hazard records usually need suburb, statistical-area, council, or source-site checks. This page helps you do that properly.</p>
+        <div class="summary-pills">
+          <span>Check</span>
+          <span>Verify</span>
+          <span>Score</span>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section street-score-section" id="street-score">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow eyebrow-dark"><span></span> Street check plan</div>
+          <h2>Know what to check<br>before you offer.</h2>
+        </div>
+        <p>This is a due-diligence guide, not an address search. Choose the council area if you want the property-map and LIM links pointed in the right direction.</p>
+      </div>
+
+      <div class="street-lookup-panel" aria-labelledby="planTitle">
+        <div class="lookup-copy">
+          <span class="label">Prepare your checks</span>
+          <h3 id="planTitle">Create a practical source pack.</h3>
+          <p>Use this to organise the checks before you rely on a street, suburb or investment story. No address is required because this page is not returning property-specific data.</p>
+          <div class="format-box">
+            <strong>How to use it</strong>
+            <span>Choose the council area, open the source pack, then fill in the scorecard after checking the evidence.</span>
+            <span>For suburb, census, rent and Police checks, use the source websites directly because their search tools and boundaries differ.</span>
+          </div>
+        </div>
+
+        <form class="lookup-form" id="streetPlanForm">
+          <label>
+            <span>Council area for property maps / LIM</span>
+            <select id="planCouncil">
+              <option value="wellington">Wellington City Council</option>
+              <option value="hutt">Hutt City Council</option>
+              <option value="upper-hutt">Upper Hutt City Council</option>
+              <option value="porirua">Porirua City Council</option>
+              <option value="auckland">Auckland Council</option>
+              <option value="christchurch">Christchurch City Council</option>
+              <option value="tauranga">Tauranga City Council</option>
+              <option value="hamilton">Hamilton City Council</option>
+              <option value="dunedin">Dunedin City Council</option>
+              <option value="other">Other / not sure</option>
+            </select>
+          </label>
+          <div class="lookup-actions">
+            <button class="button button-primary" type="submit">Update source pack <span>&rarr;</span></button>
+          </div>
+          <p class="lookup-error" id="planError" role="alert"></p>
+        </form>
+      </div>
+
+      <div class="lookup-result" id="planResult">
+        <div>
+          <span class="label">Due diligence guide</span>
+          <h3 id="planSummary">Start with the street story, then prove it.</h3>
+          <p id="planSearchTerms">Use the checklist below to gather evidence. The scorecard is deliberately manual because the quality of a street depends on context, not one automatic number.</p>
+        </div>
+        <div class="check-plan-grid" id="checkPlanGrid"></div>
+        <div class="source-link-heading">
+          <span class="label">Source pack</span>
+          <p>These links help you verify the evidence yourself. Use suburb or statistical-area data where exact street-level data is not available.</p>
+        </div>
+        <div class="lookup-links" id="sourceLinks"></div>
+      </div>
+
+      <div class="street-score-grid">
+        <form class="street-score-form" id="streetScoreForm">
+          <label>
+            <span>Your due diligence notes</span>
+            <textarea id="streetNotes" rows="4" placeholder="Optional: note what you checked, what looked strong, and what needs follow-up before relying on the score."></textarea>
+          </label>
+          <div class="score-slider"><span>Community fit</span><input type="range" min="1" max="5" value="3" data-score><b>3</b><small>Use census and area context. Score high when the property fits the local household and buyer/tenant profile.</small></div>
+          <div class="score-slider"><span>School and family appeal</span><input type="range" min="1" max="5" value="3" data-score><b>3</b><small>Check school zones, parks, childcare, crossings and family convenience.</small></div>
+          <div class="score-slider"><span>Safety and nuisance</span><input type="range" min="1" max="5" value="3" data-score><b>3</b><small>Compare Police area data with visits at different times of day and week.</small></div>
+          <div class="score-slider"><span>Hazards and insurance risk</span><input type="range" min="1" max="5" value="3" data-score><b>3</b><small>Use council maps, LIM, natural hazard records, title and insurance questions.</small></div>
+          <div class="score-slider"><span>Transport and daily convenience</span><input type="range" min="1" max="5" value="3" data-score><b>3</b><small>Check commute, public transport, shops, healthcare, parking and walkability.</small></div>
+          <div class="score-slider"><span>Market and rental demand</span><input type="range" min="1" max="5" value="3" data-score><b>3</b><small>Compare sale evidence, rent evidence, active listings, days on market and competing stock.</small></div>
+        </form>
+
+        <aside class="street-score-result">
+          <span class="label">Indicative street score</span>
+          <strong id="streetScore">60%</strong>
+          <p id="streetScoreText">Balanced. Worth investigating, but check the weaker areas before relying on the suburb story.</p>
+          <div class="score-band"><i id="streetScoreBar"></i></div>
+          <small>This is a decision aid, not a valuation or advice. The score should reflect the evidence you checked, not guesswork.</small>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section data-lens-section">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow eyebrow-dark"><span></span> What to check and how</div>
+          <h2>Turn street feel<br>into evidence.</h2>
+        </div>
+        <p>Each category below shows what useful evidence looks like, common red flags, and the best source to verify it.</p>
+      </div>
+      <div class="due-diligence-grid" id="dueDiligenceGrid"></div>
+    </section>
+
+    <section class="section street-checklist-section">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow eyebrow-dark"><span></span> On-the-ground checks</div>
+          <h2>The data will not<br>walk the street for you.</h2>
+        </div>
+        <p>Visit at different times and compare what you see with the data. The best streets usually pass both tests.</p>
+      </div>
+      <div class="visit-grid">
+        <article><strong>Weekday morning</strong><span>Commute flow, school traffic, parking pressure, noise and bus frequency.</span></article>
+        <article><strong>School pickup</strong><span>Family demand, traffic pinch points, safety crossings and street congestion.</span></article>
+        <article><strong>Friday night</strong><span>Noise, parties, lighting, street activity and nuisance risk.</span></article>
+        <article><strong>Sunday afternoon</strong><span>Neighbourhood pride, gardens, maintenance, families and overall feel.</span></article>
+      </div>
+    </section>
+
+    <section class="section source-reference" id="street-sources">
+      <div class="section-heading">
+        <div>
+          <div class="eyebrow eyebrow-dark"><span></span> Street check data sources</div>
+          <h2>Where to verify<br>the information.</h2>
+        </div>
+        <p>These sources are starting points. Each source has its own search method; use suburb, statistical area, council, school name, or property details only where that source asks for it.</p>
+      </div>
+      <div class="source-grid street-source-grid">
+        <article><span>Census and demographics</span><h3>Stats NZ</h3><p>Use for population, age, income, household type, tenure, dwelling type, ethnicity, languages, education and occupation at area level.</p><a href="https://www.stats.govt.nz/" target="_blank" rel="noopener">Open Stats NZ</a></article>
+        <article><span>Schools</span><h3>Education Counts and ERO</h3><p>Find nearby schools, zones, roll information and Education Review Office reports.</p><a href="https://www.educationcounts.govt.nz/find-school" target="_blank" rel="noopener">Find schools</a></article>
+        <article><span>Safety</span><h3>NZ Police data</h3><p>Compare area-level crime and victimisation patterns, then verify the street in person.</p><a href="https://www.police.govt.nz/about-us/publications-statistics/data-and-statistics/policedatanz" target="_blank" rel="noopener">Open Police data</a></article>
+        <article><span>Hazards and land</span><h3>Council GIS, LIM and LINZ</h3><p>Check flood, landslip, coastal risk, zoning, title, services, land records and council files.</p><a href="https://data.linz.govt.nz/" target="_blank" rel="noopener">Open LINZ Data Service</a></article>
+        <article><span>Rental evidence</span><h3>Tenancy Services</h3><p>Use market rent data and active bond counts to test realistic rent and demand.</p><a href="https://www.tenancy.govt.nz/rent-bond-and-bills/market-rent/" target="_blank" rel="noopener">Open market rent</a></article>
+        <article><span>Market evidence</span><h3>realestate.co.nz</h3><p>Use current listings and suburb insights to compare asking prices, supply, rent and trend context.</p><a href="https://www.realestate.co.nz/insights" target="_blank" rel="noopener">Open insights</a></article>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <a class="brand brand-footer" href="index.html">
+      <span class="brand-mark"><i></i><i></i><i></i></span>
+      <span>PROPERTY INVESTMENT <strong>GURU</strong></span>
+    </a>
+    <p>Independent property intelligence for smarter decisions.</p>
+    <span>WELLINGTON, NEW ZEALAND</span>
+  </footer>
+
+  <script src="street-check.js"></script>
+</body>
+</html>
