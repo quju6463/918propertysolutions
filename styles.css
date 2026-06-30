@@ -116,11 +116,11 @@ button, input, textarea { font: inherit; }
 .visual-footer .progress i { display: block; width: 60%; height: 100%; background: var(--acid); }
 .visual-footer strong { color: var(--acid); font-weight: 400; }
 
-.hero-service-panel { position: absolute; inset: 150px 35px 70px; display: grid; gap: 14px; }
-.hero-service-panel article { padding: 28px; display: flex; flex-direction: column; justify-content: flex-end; border: 1px solid rgba(255,255,255,.09); background: linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.02)); }
-.hero-service-panel span { margin-bottom: auto; color: var(--acid); font: 500 10px var(--mono); letter-spacing: .1em; }
-.hero-service-panel h2 { max-width: 420px; margin: 35px 0 14px; color: #fff; font-size: clamp(29px, 3vw, 48px); line-height: .98; letter-spacing: -.06em; }
-.hero-service-panel p { max-width: 470px; margin: 0; color: rgba(255,255,255,.58); font-size: 13px; line-height: 1.75; }
+.hero-service-panel { position: absolute; top: 145px; left: 35px; right: 35px; display: grid; gap: 12px; align-content: start; }
+.hero-service-panel article { padding: 24px 28px; display: grid; grid-template-columns: 46px 1fr; gap: 10px 18px; align-content: center; border: 1px solid rgba(255,255,255,.09); background: linear-gradient(145deg, rgba(255,255,255,.065), rgba(255,255,255,.02)); }
+.hero-service-panel span { grid-row: 1 / 3; color: var(--acid); font: 500 10px var(--mono); letter-spacing: .1em; }
+.hero-service-panel h2 { max-width: 420px; margin: 0; color: #fff; font-size: clamp(27px, 2.45vw, 40px); line-height: 1.02; letter-spacing: -.06em; }
+.hero-service-panel p { max-width: 490px; margin: 0; color: rgba(255,255,255,.6); font-size: 13px; line-height: 1.55; }
 
 .ticker { display: grid; grid-template-columns: 1fr repeat(5, 1.25fr); border-bottom: 1px solid var(--line); background: var(--paper-deep); }
 .ticker > * { min-height: 64px; padding: 0 20px; border-right: 1px solid var(--line); display: flex; align-items: center; gap: 12px; font: 400 9px var(--mono); letter-spacing: .06em; text-transform: uppercase; }
@@ -397,8 +397,9 @@ footer { min-height: 90px; padding: 24px 5vw; display: flex; align-items: center
   .hero-meta { gap: 22px; }
   .hero-visual { min-height: 640px; }
   .hero-service-panel { inset: 120px 18px 70px; }
-  .hero-service-panel article { padding: 22px; }
-  .hero-service-panel h2 { margin-top: 26px; font-size: 30px; }
+  .hero-service-panel article { grid-template-columns: 34px 1fr; padding: 20px; }
+  .hero-service-panel h2 { font-size: 27px; }
+  .hero-service-panel p { font-size: 12px; }
   .rental-data-panel { inset: 130px 18px 70px; }
   .rental-data-panel { padding: 18px; gap: 13px; }
   .rental-panel-head { grid-template-columns: 1fr; padding-bottom: 12px; }
