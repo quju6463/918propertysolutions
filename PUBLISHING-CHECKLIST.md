@@ -1,4 +1,4 @@
-# Property Investment Guru Publishing Checklist
+# 918 Property Solutions Publishing Checklist
 
 ## Best Simple Publishing Path
 
