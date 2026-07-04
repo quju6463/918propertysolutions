@@ -1,7 +1,7 @@
 .flip-page { background: var(--paper); }
 .flip-header { position: absolute; }
 .flip-hero { min-height: 650px; padding: 170px 7vw 90px; display: grid; grid-template-columns: 1.2fr .8fr; align-items: end; gap: 8vw; color: #f7f4ea; background: var(--ink); }
-.flip-hero h1 { margin: 0; font-size: clamp(58px, 6.3vw, 104px); line-height: .97; letter-spacing: -.075em; }
+.flip-hero h1 { margin: 0; font-size: clamp(58px, 6.3vw, 104px); line-height: .97; letter-spacing: -.055em; }
 .flip-hero h1 em { color: var(--acid); font-style: normal; font-weight: 400; }
 .flip-hero-copy > p { max-width: 650px; margin: 30px 0 0; color: rgba(255,255,255,.55); font-size: 14px; line-height: 1.85; }
 .formula-card { padding: 30px; border: 1px solid rgba(255,255,255,.13); background: #1b2720; }
@@ -154,8 +154,8 @@
   .result-sticky { position: static; min-height: auto; }
 }
 @media (max-width: 700px) {
-  .flip-hero { min-height: 660px; padding: 145px 20px 65px; }
-  .flip-hero h1 { font-size: 52px; }
+  .flip-hero { min-height: 610px; padding: 165px 20px 58px; }
+  .flip-hero h1 { font-size: 48px; letter-spacing: -.045em; line-height: 1; }
   .flip-form, .result-sticky { padding: 70px 20px; }
   .field-grid { grid-template-columns: 1fr; }
   .itemised-renovation { padding: 18px; }

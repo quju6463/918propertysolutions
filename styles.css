@@ -68,7 +68,7 @@ button, input, textarea { font: inherit; }
 .eyebrow-dark { color: #5d675f; }
 .hero h1, .section-heading h2, .calculator-intro h2, .closing h2 {
   margin: 0;
-  letter-spacing: -.075em;
+  letter-spacing: -.055em;
   line-height: .97;
   font-size: clamp(58px, 6.3vw, 104px);
   font-weight: 700;
@@ -404,11 +404,13 @@ footer { min-height: 90px; padding: 24px 5vw; display: flex; align-items: center
 .street-source-grid { grid-template-columns: repeat(3, 1fr); }
 
 @media (max-width: 1050px) {
-  .main-nav { display: none; }
+  .site-header { flex-wrap: wrap; gap: 16px 24px; }
+  .main-nav { order: 3; width: 100%; flex-wrap: wrap; gap: 8px 18px; overflow: visible; padding-bottom: 0; }
+  .main-nav a { flex: 0 0 auto; }
   .hero { grid-template-columns: 1fr; }
   .contact-hero, .street-hero { grid-template-columns: 1fr; }
   .hero-visual { min-height: 580px; }
-  .hero-copy { min-height: 720px; }
+  .hero-copy { min-height: 640px; padding-top: 165px; }
   .ticker { grid-template-columns: repeat(3, 1fr); }
   .ticker-title { display: none; }
   .signal-grid, .calculator-section, .intelligence-grid, .service-grid, .situation-grid, .option-grid, .about-card, .process-grid, .disclosure-card, .market-check-grid, .source-grid, .short-stay-section, .cash-offer-section, .street-lookup-panel, .street-score-grid, .lens-grid, .visit-grid, .street-source-grid, .category-insights, .check-plan-grid, .due-diligence-grid, .lookup-links { grid-template-columns: 1fr; }
@@ -418,8 +420,12 @@ footer { min-height: 90px; padding: 24px 5vw; display: flex; align-items: center
 @media (max-width: 700px) {
   .site-header { padding: 19px 20px; }
   .header-cta { display: none; }
-  .hero-copy { min-height: 650px; padding: 150px 22px 60px; }
-  .hero h1 { font-size: 54px; }
+  .main-nav { gap: 8px 12px; font-size: 9px; }
+  .hero-copy { min-height: 590px; padding: 165px 22px 50px; }
+  .hero h1 { font-size: 48px; letter-spacing: -.045em; line-height: 1; }
+  .hero-copy > p { font-size: 16px; line-height: 1.7; }
+  .hero-actions { align-items: flex-start; flex-direction: column; gap: 20px; }
+  .button { width: 100%; justify-content: space-between; }
   .hero-meta { gap: 22px; }
   .hero-visual { min-height: 640px; }
   .hero-service-panel { inset: 120px 18px 70px; }
