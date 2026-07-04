@@ -4,10 +4,10 @@
 .flip-hero h1 { margin: 0; font-size: clamp(58px, 6.3vw, 104px); line-height: .97; letter-spacing: -.055em; }
 .flip-hero h1 em { color: var(--acid); font-style: normal; font-weight: 400; }
 .flip-hero-copy > p { max-width: 650px; margin: 30px 0 0; color: rgba(255,255,255,.55); font-size: 14px; line-height: 1.85; }
-.formula-card { padding: 30px; border: 1px solid rgba(255,255,255,.13); background: #1b2720; }
+.formula-card { padding: 30px; border: 1px solid rgba(255,255,255,.13); border-radius: var(--radius-card); background: linear-gradient(145deg, #1b271f, #253026); box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 22px 70px rgba(0,0,0,.08); }
 .formula-card .label { color: rgba(255,255,255,.42); }
 .formula { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; margin: 30px 0; font: 400 10px var(--mono); text-transform: uppercase; letter-spacing: .05em; }
-.formula span, .formula strong { padding: 10px; border: 1px solid rgba(255,255,255,.12); }
+.formula span, .formula strong { padding: 10px; border: 1px solid rgba(255,255,255,.12); border-radius: 10px; }
 .formula b { color: var(--acid); font-weight: 400; }
 .formula strong { color: var(--ink); background: var(--acid); border-color: var(--acid); }
 .formula-card p { margin: 0; color: rgba(255,255,255,.4); font: 400 9px/1.7 var(--mono); }
@@ -33,15 +33,15 @@
 .text-field input:focus { background: rgba(200,255,71,.12); }
 .save-actions { display: flex; align-items: center; gap: 18px; margin-top: 20px; }
 .save-button, .new-deal-button, .deal-action { border: 0; cursor: pointer; text-transform: uppercase; letter-spacing: .06em; }
-.save-button { padding: 14px 18px; color: var(--ink); background: var(--acid); font: 600 11px var(--mono); }
-.new-deal-button { padding: 13px 17px; border: 1px solid var(--line); color: var(--ink); background: transparent; font: 600 10px var(--mono); }
+.save-button { padding: 14px 18px; border-radius: var(--radius-pill); color: var(--ink); background: linear-gradient(135deg, #dffb75, var(--acid)); font: 600 11px var(--mono); }
+.new-deal-button { padding: 13px 17px; border: 1px solid var(--line); border-radius: var(--radius-pill); color: var(--ink); background: transparent; font: 600 10px var(--mono); }
 .save-actions span { color: #7e8780; font: 400 10px/1.5 var(--mono); }
 .save-actions span.is-success { color: #327854; }
 .suffix-field input[type="number"] { padding-left: 16px; }
 .field-grid input[type="number"]:focus, .money-field input[type="text"]:focus { background: rgba(200,255,71,.12); }
 .select-field select { width: 100%; height: 100%; padding: 0 14px; border: 0; outline: 0; color: var(--ink); background: transparent; font: 500 11px var(--mono); }
 .is-hidden { display: none !important; }
-.itemised-renovation { margin-top: 28px; padding: 25px; border: 1px solid var(--line); background: rgba(255,255,255,.22); }
+.itemised-renovation { margin-top: 28px; padding: 25px; border: 1px solid var(--line); border-radius: var(--radius-card); background: rgba(255,255,255,.22); }
 .itemised-heading { display: flex; align-items: center; justify-content: space-between; gap: 25px; margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid var(--line); }
 .itemised-heading > div { display: flex; flex-direction: column; gap: 5px; }
 .itemised-heading strong { font: 600 11px var(--mono); text-transform: uppercase; letter-spacing: .06em; }
@@ -133,7 +133,7 @@
 .empty-deals { min-height: 160px; padding: 30px; border: 1px dashed #aeb3ab; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px; color: #747d76; text-align: center; }
 .empty-deals strong { color: var(--ink); font-size: 16px; }
 .empty-deals span { font-size: 12px; }
-.comparison-wrap { overflow-x: auto; border: 1px solid var(--line); background: var(--paper); }
+.comparison-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-card); background: var(--paper); }
 .comparison-table { width: 100%; min-width: 860px; border-collapse: collapse; }
 .comparison-table th, .comparison-table td { min-width: 190px; padding: 17px 18px; border-right: 1px solid var(--line); border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
 .comparison-table th:first-child, .comparison-table td:first-child { position: sticky; left: 0; z-index: 2; min-width: 170px; background: #e1ddd2; }
