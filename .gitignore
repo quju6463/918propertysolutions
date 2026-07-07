@@ -2,3 +2,10 @@
 .agents/
 .codex/
 .git-onedrive-placeholder-*/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
