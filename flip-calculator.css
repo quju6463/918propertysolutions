@@ -1,8 +1,8 @@
 .flip-page { background: var(--paper); }
 .flip-header { position: absolute; }
 .flip-hero { min-height: 650px; padding: 170px 7vw 90px; display: grid; grid-template-columns: 1.2fr .8fr; align-items: end; gap: 8vw; color: #f7f4ea; background: var(--ink); }
-.flip-hero h1 { margin: 0; font-size: clamp(58px, 6.3vw, 104px); line-height: .97; letter-spacing: -.055em; }
-.flip-hero h1 em { color: var(--acid); font-style: normal; font-weight: 400; }
+.flip-hero h1 { margin: 0; font: 600 clamp(54px, 5.8vw, 92px)/1.02 var(--serif); letter-spacing: -.045em; }
+.flip-hero h1 em { color: var(--acid); font-style: italic; font-weight: 600; }
 .flip-hero-copy > p { max-width: 650px; margin: 30px 0 0; color: rgba(255,255,255,.55); font-size: 14px; line-height: 1.85; }
 .formula-card { padding: 30px; border: 1px solid rgba(255,255,255,.13); border-radius: var(--radius-card); background: linear-gradient(145deg, #1b271f, #253026); box-shadow: inset 0 1px 0 rgba(255,255,255,.05), 0 22px 70px rgba(0,0,0,.08); }
 .formula-card .label { color: rgba(255,255,255,.42); }
@@ -15,7 +15,7 @@
 .flip-form { padding: 90px 7vw; }
 .form-heading { display: flex; justify-content: space-between; align-items: end; margin-bottom: 52px; }
 .step { font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .12em; color: #748078; }
-.form-heading h2 { margin: 9px 0 0; font-size: clamp(38px, 4vw, 62px); letter-spacing: -.06em; }
+.form-heading h2 { margin: 9px 0 0; font: 600 clamp(38px, 4vw, 62px)/1.04 var(--serif); letter-spacing: -.04em; }
 .reset-button { padding: 9px 0; border: 0; border-bottom: 1px solid var(--ink); background: transparent; color: #687169; cursor: pointer; font: 500 8px var(--mono); text-transform: uppercase; letter-spacing: .08em; }
 .flip-form fieldset { margin: 0 0 50px; padding: 0; border: 0; }
 .flip-form legend { width: 100%; margin-bottom: 25px; padding-bottom: 12px; border-bottom: 1px solid var(--line); color: #737c75; font: 500 9px var(--mono); text-transform: uppercase; letter-spacing: .12em; }
@@ -87,7 +87,7 @@
 .result-alert.is-negative i { background: var(--orange); }
 .result-alert.is-negative strong { color: var(--orange); }
 .flip-notes { padding: 120px 7vw; text-align: center; background: var(--paper-deep); }
-.flip-notes h2 { margin: 22px 0; font-size: clamp(48px, 6vw, 88px); line-height: .98; letter-spacing: -.07em; }
+.flip-notes h2 { margin: 22px 0; font: 600 clamp(48px, 6vw, 88px)/1.02 var(--serif); letter-spacing: -.045em; }
 .flip-notes p { max-width: 650px; margin: 0 auto 38px; color: #727b74; font-size: 11px; line-height: 1.85; }
 .form-source { margin-top: 20px; color: #758078; }
 .calculator-source-list { max-width: 780px; margin: 0 auto 34px; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
@@ -127,7 +127,7 @@
 
 .saved-deals { padding: 110px 7vw; border-top: 1px solid var(--line); background: #ebe7dc; }
 .saved-deals-heading { display: flex; align-items: end; justify-content: space-between; gap: 40px; margin-bottom: 45px; }
-.saved-deals-heading h2 { margin: 10px 0 12px; font-size: clamp(42px, 5vw, 72px); line-height: 1; letter-spacing: -.07em; }
+.saved-deals-heading h2 { margin: 10px 0 12px; font: 600 clamp(42px, 5vw, 72px)/1.02 var(--serif); letter-spacing: -.045em; }
 .saved-deals-heading p { max-width: 620px; margin: 0; color: #69736b; font-size: 14px; line-height: 1.7; }
 .saved-count { padding: 10px 13px; border: 1px solid var(--line); border-radius: 99px; font: 500 11px var(--mono); text-transform: uppercase; }
 .empty-deals { min-height: 160px; padding: 30px; border: 1px dashed #aeb3ab; display: flex; flex-direction: column; justify-content: center; align-items: center; gap: 8px; color: #747d76; text-align: center; }

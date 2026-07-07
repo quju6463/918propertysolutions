@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512" role="img" aria-labelledby="title desc">
+  <title id="title">918 Property Solutions mark</title>
+  <desc id="desc">Square architectural 918 mark for icons, social profiles, clothing, and vehicle decals.</desc>
+  <defs>
+    <linearGradient id="panel" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#314238"/>
+      <stop offset="1" stop-color="#17231d"/>
+    </linearGradient>
+    <linearGradient id="green" x1="95" y1="183" x2="325" y2="300" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#6fa58f"/>
+      <stop offset="1" stop-color="#2f8f72"/>
+    </linearGradient>
+    <linearGradient id="rust" x1="294" y1="180" x2="425" y2="305" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#b77a55"/>
+      <stop offset="1" stop-color="#bb4b2b"/>
+    </linearGradient>
+  </defs>
+  <rect x="28" y="28" width="456" height="456" rx="64" fill="url(#panel)"/>
+  <rect x="108" y="142" width="45" height="52" rx="7" fill="#6fa58f"/>
+  <path d="M91 192 256 76l165 116" fill="none" stroke="#fffaf0" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M376 110v-36h56v76" fill="none" stroke="#b77a55" stroke-width="21" stroke-linecap="round" stroke-linejoin="round"/>
+  <rect x="234" y="140" width="44" height="44" rx="7" fill="#fffaf0"/>
+  <rect x="374" y="146" width="48" height="48" rx="7" fill="#b77a55"/>
+  <rect x="72" y="222" width="368" height="184" rx="32" fill="#fffaf0"/>
+  <g fill="none" stroke-linecap="square" stroke-linejoin="round">
+    <g stroke="url(#green)" stroke-width="26">
+      <path d="M124 260h74"/>
+      <path d="M124 260v58"/>
+      <path d="M198 260v116"/>
+      <path d="M124 318h74"/>
+      <path d="M124 376h74"/>
+    </g>
+    <g stroke="#17231d" stroke-width="28">
+      <path d="M256 260v116"/>
+    </g>
+    <g stroke="url(#rust)" stroke-width="26">
+      <path d="M316 260h80v58h-80v-58Z"/>
+      <path d="M316 318h80v58h-80v-58Z"/>
+      <path d="M316 260v116"/>
+      <path d="M396 260v116"/>
+      <path d="M316 318h80"/>
+    </g>
+  </g>
+  <path d="M90 439h332" fill="none" stroke="#2f8f72" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="374" cy="440" r="28" fill="#fffaf0"/>
+  <path d="M398 440h62m-22 0v28m-27-28v18" fill="none" stroke="#fffaf0" stroke-width="14" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="360" viewBox="0 0 1200 360" role="img" aria-labelledby="title desc">
+  <title id="title">918 Property Solutions single color logo</title>
+  <desc id="desc">Single color version for vinyl, embroidery, screen printing, and vehicle decals.</desc>
+  <g fill="#17231d" stroke="#17231d" stroke-linecap="square" stroke-linejoin="round">
+    <g transform="translate(42 42)">
+      <rect width="276" height="276" rx="38" fill="none" stroke-width="18"/>
+      <path d="M54 101 138 42l84 59" fill="none" stroke-width="13" stroke-linecap="round"/>
+      <path d="M199 59v-18h28v38" fill="none" stroke-width="11" stroke-linecap="round"/>
+      <rect x="36" y="116" width="204" height="101" rx="18" fill="none" stroke-width="12"/>
+      <g fill="none" stroke-width="14">
+        <path d="M64 136h40"/>
+        <path d="M64 136v31"/>
+        <path d="M104 136v62"/>
+        <path d="M64 167h40"/>
+        <path d="M64 198h40"/>
+        <path d="M138 136v62" stroke-width="15"/>
+        <path d="M172 136h43v31h-43v-31Z"/>
+        <path d="M172 167h43v31h-43v-31Z"/>
+        <path d="M172 136v62"/>
+        <path d="M215 136v62"/>
+        <path d="M172 167h43"/>
+      </g>
+      <path d="M46 234h184" fill="none" stroke-width="10" stroke-linecap="round"/>
+      <circle cx="199" cy="235" r="15" fill="none" stroke-width="8"/>
+      <path d="M212 235h32m-12 0v15m-14-15v10" fill="none" stroke-width="7" stroke-linecap="round"/>
+    </g>
+  </g>
+  <g transform="translate(382 95)" fill="#17231d">
+    <text x="0" y="56" font-family="Arial Black, Arial, Helvetica, sans-serif" font-size="70" font-weight="900" letter-spacing="-1">918</text>
+    <text x="0" y="118" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="900" letter-spacing="2">PROPERTY</text>
+    <text x="0" y="178" font-family="Arial, Helvetica, sans-serif" font-size="50" font-weight="900" letter-spacing="2">SOLUTIONS</text>
+    <rect x="2" y="201" width="370" height="6" rx="3"/>
+    <text x="2" y="245" font-family="Arial, Helvetica, sans-serif" font-size="20" font-weight="800" letter-spacing="4">PROPERTY PROBLEMS, SOLVED.</text>
+  </g>
+</svg>
