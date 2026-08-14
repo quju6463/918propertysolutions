@@ -1,4 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="918 Property Solutions">
-  <rect width="64" height="64" rx="10" fill="#121914"/>
-  <path d="M14 46h8V28h-8v18Zm14 0h8V18h-8v28Zm14 0h8V10h-8v36Z" fill="#c8ff47" transform="skewY(-12)"/>
+  <rect width="64" height="64" rx="14" fill="#17231d"/>
+  <path d="M15 20 32 9l17 11" fill="none" stroke="#fffaf0" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M45 14v-6h7v12" fill="none" stroke="#bb4b2b" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="32" y="45" text-anchor="middle" font-family="Arial Black, Arial, sans-serif" font-size="24" font-weight="900" letter-spacing="-2" fill="#fffaf0">918</text>
+  <path d="M14 52h36" fill="none" stroke="#2f8f72" stroke-width="4" stroke-linecap="round"/>
 </svg>
