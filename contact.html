@@ -64,29 +64,28 @@
           <input type="hidden" name="_subject" value="New property enquiry from 918 Property Solutions website">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
-          <input type="hidden" name="_next" value="https://918propertysolutions.co.nz/contact.html?submitted=1">
+          <input type="hidden" name="_next" value="https://918propertysolutions.co.nz/contact?submitted=1">
           <input type="hidden" name="lead_source" value="main contact page">
           <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
 
           <label class="form-field">
-            <span>Name</span>
+            <span>Property address or suburb</span>
+            <input type="text" name="property_address" placeholder="Street address or suburb" autocomplete="street-address" required>
+          </label>
+
+          <label class="form-field">
+            <span>Your name</span>
             <input type="text" name="name" autocomplete="name" required>
           </label>
 
-          <div class="form-two-col">
-            <label class="form-field">
-              <span>Phone</span>
-              <input type="tel" name="phone" autocomplete="tel" required>
-            </label>
-            <label class="form-field">
-              <span>Email</span>
-              <input type="email" name="email" autocomplete="email">
-            </label>
-          </div>
+          <label class="form-field">
+            <span>Phone number</span>
+            <input type="tel" name="phone" autocomplete="tel" inputmode="tel" required>
+          </label>
 
           <label class="form-field">
-            <span>Property address or suburb</span>
-            <input type="text" name="property_address" autocomplete="street-address" required>
+            <span>Email optional</span>
+            <input type="email" name="email" autocomplete="email" inputmode="email">
           </label>
 
           <label class="form-field">
