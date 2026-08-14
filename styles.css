@@ -765,6 +765,120 @@ footer {
 .contact-success { margin: 18px 0 0; padding: 14px 16px; border: 1px solid rgba(47,143,114,.28); background: rgba(47,143,114,.09); color: #294d3f; font-size: 14px; line-height: 1.6; }
 .contact-fallback { margin: 20px 0 0; color: #667068; font-size: 13px; line-height: 1.6; }
 .contact-fallback a { color: var(--ink); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
+.sell-page { background: var(--paper); }
+.sell-header {
+  position: relative;
+  z-index: 4;
+  min-height: 86px;
+  padding: 20px 5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  border-bottom: 1px solid var(--line);
+  background: rgba(247,244,237,.94);
+}
+.sell-header .site-logo { width: min(220px, 54vw); }
+.sell-header-link {
+  padding: 12px 16px;
+  border: 1px solid var(--line);
+  color: var(--ink);
+  background: rgba(255,250,240,.48);
+  font: 700 11px var(--mono);
+  letter-spacing: .07em;
+  text-transform: uppercase;
+}
+.sell-header-link span { color: var(--orange); margin-left: 6px; }
+.sell-hero {
+  min-height: calc(100vh - 86px);
+  padding: clamp(34px, 5vw, 70px) 7vw clamp(46px, 6vw, 88px);
+  display: grid;
+  grid-template-columns: minmax(0, .92fr) minmax(360px, .7fr);
+  gap: clamp(34px, 6vw, 92px);
+  align-items: center;
+  background:
+    radial-gradient(circle at 10% 16%, rgba(47,143,114,.12), transparent 30%),
+    linear-gradient(135deg, rgba(255,250,240,.78), rgba(235,228,216,.72));
+}
+.sell-copy h1 {
+  max-width: 760px;
+  margin: 0;
+  font: 650 clamp(52px, 7vw, 108px)/.94 var(--serif);
+  letter-spacing: -.055em;
+  color: var(--ink);
+}
+.sell-copy > p {
+  max-width: 680px;
+  margin: 28px 0 0;
+  color: #536059;
+  font-size: clamp(17px, 1.55vw, 21px);
+  line-height: 1.68;
+}
+.sell-points {
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.sell-points span {
+  padding: 10px 13px;
+  border: 1px solid rgba(49,66,56,.18);
+  background: rgba(255,250,240,.58);
+  color: var(--ink-soft);
+  font: 700 11px var(--mono);
+  letter-spacing: .055em;
+  text-transform: uppercase;
+}
+.sell-copy .sell-note {
+  max-width: 620px;
+  margin-top: 28px;
+  color: #687169;
+  font-size: 14px;
+  line-height: 1.75;
+}
+.sell-form-card {
+  min-height: auto;
+  box-shadow: 0 26px 70px rgba(23,35,29,.12);
+  background: rgba(255,250,240,.92);
+}
+.sell-form-card h2 { font-size: clamp(38px, 4.2vw, 64px); }
+.sell-form-card .form-field textarea { min-height: 96px; }
+.sell-form-disclaimer {
+  margin: 16px 0 0;
+  padding-top: 14px;
+  border-top: 1px solid var(--line);
+  color: #687169;
+  font-size: 12px;
+  line-height: 1.6;
+}
+.sell-trust-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  border-top: 1px solid var(--line);
+  border-bottom: 1px solid var(--line);
+  background: #fffaf0;
+}
+.sell-trust-strip div {
+  min-height: 150px;
+  padding: 30px 5vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-right: 1px solid var(--line);
+}
+.sell-trust-strip div:last-child { border-right: 0; }
+.sell-trust-strip strong {
+  color: var(--ink);
+  font: 700 18px/1.15 var(--sans);
+  letter-spacing: -.02em;
+}
+.sell-trust-strip span {
+  max-width: 340px;
+  margin-top: 10px;
+  color: #667068;
+  font-size: 14px;
+  line-height: 1.6;
+}
 .contact-list { margin-top: auto; display: grid; gap: 12px; }
 .contact-list div { padding: 18px; border: 1px solid var(--line); background: rgba(255,255,255,.34); }
 .contact-list strong { display: block; margin-bottom: 8px; color: var(--ink); font-size: 15px; }
@@ -863,14 +977,17 @@ footer {
   .main-nav a { flex: 0 0 auto; }
   .hero { grid-template-columns: 1fr; }
   .calculator-intro { position: static; }
-  .contact-hero, .projects-hero, .street-hero { grid-template-columns: 1fr; }
+  .contact-hero, .projects-hero, .street-hero, .sell-hero { grid-template-columns: 1fr; }
   .hero-visual { min-height: 650px; padding: 30px 7vw 96px; }
   .hero-side-note { position: static; margin-bottom: 18px; }
   .hero-copy { min-height: 640px; padding-top: 165px; }
   .tool-strip { grid-template-columns: 1fr 1fr; }
   .ticker { grid-template-columns: repeat(3, 1fr); }
   .ticker-title { display: none; }
-  .signal-grid, .calculator-section, .calculator-hub, .intelligence-grid, .service-grid, .situation-grid, .option-grid, .about-card, .process-grid, .featured-project-card, .featured-project-metrics, .case-study-card, .case-gallery, .case-metrics, .contact-proof-grid, .disclosure-card, .market-check-grid, .source-grid, .short-stay-section, .cash-offer-section, .street-lookup-panel, .street-score-grid, .lens-grid, .visit-grid, .street-source-grid, .category-insights, .check-plan-grid, .due-diligence-grid, .lookup-links { grid-template-columns: 1fr; }
+  .signal-grid, .calculator-section, .calculator-hub, .intelligence-grid, .service-grid, .situation-grid, .option-grid, .about-card, .process-grid, .featured-project-card, .featured-project-metrics, .case-study-card, .case-gallery, .case-metrics, .contact-proof-grid, .disclosure-card, .market-check-grid, .source-grid, .short-stay-section, .cash-offer-section, .street-lookup-panel, .street-score-grid, .lens-grid, .visit-grid, .street-source-grid, .category-insights, .check-plan-grid, .due-diligence-grid, .lookup-links, .sell-trust-strip { grid-template-columns: 1fr; }
+  .sell-hero { min-height: auto; padding-top: 70px; }
+  .sell-trust-strip div { min-height: auto; border-right: 0; border-bottom: 1px solid var(--line); }
+  .sell-trust-strip div:last-child { border-bottom: 0; }
   .case-photo, .case-photo-large, .case-photo-tall, .case-photo-wide { grid-column: auto; grid-row: auto; min-height: 360px; }
   .street-score-result { position: static; }
 }
@@ -935,6 +1052,16 @@ footer {
   .contact-card { min-height: auto; padding: 26px; }
   .contact-actions { align-items: flex-start; flex-direction: column; }
   .form-two-col { grid-template-columns: 1fr; }
+  .sell-header { padding: 18px 20px; }
+  .sell-header .site-logo { width: min(180px, 62vw); }
+  .sell-header-link { display: none; }
+  .sell-hero { padding: 42px 20px 62px; }
+  .sell-copy h1 { font-size: 49px; line-height: .96; }
+  .sell-copy > p { font-size: 16px; line-height: 1.68; }
+  .sell-points { gap: 8px; margin-top: 26px; }
+  .sell-points span { font-size: 9px; }
+  .sell-form-card { padding: 24px; }
+  .sell-trust-strip div { padding: 24px 20px; }
   .projects-hero { padding: 145px 20px 80px; }
   .projects-hero h1 { font-size: 52px; }
   .projects-hero-card { min-height: 320px; padding: 26px; }
