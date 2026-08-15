@@ -65,8 +65,10 @@
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
           <input type="hidden" name="_next" value="https://918propertysolutions.co.nz/contact?submitted=1">
-          <input type="hidden" name="lead_source" value="main contact page">
+          <input type="hidden" name="enquiry_channel" value="Website direct">
+          <input type="hidden" name="page_source" value="main contact page">
           <input type="hidden" name="campaign_source" value="direct">
+          <input type="hidden" name="referrer_url" value="">
           <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
 
           <label class="form-field">
@@ -124,9 +126,16 @@
   </footer>
   <script>
     var params = new URLSearchParams(window.location.search);
-    var source = params.get('source') || params.get('utm_source');
+    var source = params.get('source') || params.get('utm_source') || params.get('utm_campaign');
+    var referrer = document.referrer || "";
     var campaignSource = document.querySelector('input[name="campaign_source"]');
-    if (source && campaignSource) campaignSource.value = source;
+    var enquiryChannel = document.querySelector('input[name="enquiry_channel"]');
+    var referrerField = document.querySelector('input[name="referrer_url"]');
+    var cameFromFacebook = /facebook|fbclid|l\\.facebook|m\\.facebook/i.test(source || "") || /facebook|l\\.facebook|m\\.facebook/i.test(referrer);
+
+    if (campaignSource) campaignSource.value = source || (cameFromFacebook ? "facebook-referrer" : "direct");
+    if (enquiryChannel) enquiryChannel.value = cameFromFacebook ? "Facebook" : "Website direct";
+    if (referrerField) referrerField.value = referrer || "No referrer captured";
     if (params.get('submitted') === '1') {
       var success = document.getElementById('contact-success');
       if (success) success.hidden = false;
