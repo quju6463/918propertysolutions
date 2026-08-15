@@ -139,9 +139,9 @@
     var campaignSource = document.querySelector('input[name="campaign_source"]');
     var enquiryChannel = document.querySelector('input[name="enquiry_channel"]');
     var referrerField = document.querySelector('input[name="referrer_url"]');
-    var cameFromFacebook = /facebook|fbclid|l\\.facebook|m\\.facebook/i.test(source || "") || /facebook|l\\.facebook|m\\.facebook/i.test(referrer);
+    var cameFromFacebook = params.has("fbclid") || /facebook|fbclid|l\\.facebook|m\\.facebook/i.test(source || "") || /facebook|l\\.facebook|m\\.facebook/i.test(referrer);
 
-    if (campaignSource) campaignSource.value = source || (cameFromFacebook ? "facebook-referrer" : "direct");
+    if (campaignSource) campaignSource.value = source || (params.has("fbclid") ? "facebook-fbclid" : (cameFromFacebook ? "facebook-referrer" : "direct"));
     if (enquiryChannel) enquiryChannel.value = cameFromFacebook ? "Facebook" : "Website direct";
     if (referrerField) referrerField.value = referrer || "No referrer captured";
     if (params.get('submitted') === '1') {
