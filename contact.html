@@ -91,8 +91,6 @@
           <input type="hidden" name="_next" value="https://918propertysolutions.co.nz/contact?submitted=1">
           <input type="hidden" name="enquiry_channel" value="Website direct">
           <input type="hidden" name="page_source" value="main contact page">
-          <input type="hidden" name="campaign_source" value="direct">
-          <input type="hidden" name="lead_source_guess" value="">
           <input type="hidden" name="landing_page_url" value="">
           <input type="hidden" name="referrer_url" value="">
           <input type="hidden" name="device_type" value="">
@@ -169,10 +167,8 @@
     var params = new URLSearchParams(window.location.search);
     var source = params.get('source') || params.get('utm_source') || params.get('utm_campaign');
     var referrer = document.referrer || "";
-    var campaignSource = document.querySelector('input[name="campaign_source"]');
     var enquiryChannel = document.querySelector('input[name="enquiry_channel"]');
     var referrerField = document.querySelector('input[name="referrer_url"]');
-    var leadSourceGuess = document.querySelector('input[name="lead_source_guess"]');
     var landingPageField = document.querySelector('input[name="landing_page_url"]');
     var deviceField = document.querySelector('input[name="device_type"]');
     var submittedAtField = document.querySelector('input[name="submitted_at"]');
@@ -182,9 +178,7 @@
     var cameFromWebsite = /website|home|main-site/i.test(source || "") || /918propertysolutions\\.co\\.nz/i.test(referrer);
     var sourceGuess = cameFromFlyer ? "Flyer / letterbox drop" : (cameFromFacebook ? "Facebook" : (cameFromGoogle ? "Google search" : (cameFromWebsite ? "Main website" : "Likely flyer / direct visit")));
 
-    if (campaignSource) campaignSource.value = source || (params.has("fbclid") ? "facebook-fbclid" : (cameFromFacebook ? "facebook-referrer" : "direct"));
     if (enquiryChannel) enquiryChannel.value = sourceGuess;
-    if (leadSourceGuess) leadSourceGuess.value = sourceGuess;
     if (landingPageField) landingPageField.value = window.location.href;
     if (referrerField) referrerField.value = referrer || "No referrer captured";
     if (deviceField) deviceField.value = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? "Mobile/tablet" : "Desktop";
