@@ -88,6 +88,8 @@
           <input type="hidden" name="_subject" value="New property enquiry from 918 Property Solutions website">
           <input type="hidden" name="_template" value="table">
           <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_cc" value="918propertysolutionsnz@gmail.com">
+          <input type="hidden" name="_url" value="https://918propertysolutions.co.nz/contact">
           <input type="hidden" name="_next" value="https://918propertysolutions.co.nz/contact?submitted=1">
           <input type="hidden" name="enquiry_channel" value="Website direct">
           <input type="hidden" name="page_source" value="main contact page">
@@ -179,6 +181,8 @@
     var sourceGuess = cameFromFlyer ? "Flyer / letterbox drop" : (cameFromFacebook ? "Facebook" : (cameFromGoogle ? "Google search" : (cameFromWebsite ? "Main website" : "Likely flyer / direct visit")));
 
     if (enquiryChannel) enquiryChannel.value = sourceGuess;
+    var formUrlField = document.querySelector('input[name="_url"]');
+    if (formUrlField) formUrlField.value = window.location.href;
     if (landingPageField) landingPageField.value = window.location.href;
     if (referrerField) referrerField.value = referrer || "No referrer captured";
     if (deviceField) deviceField.value = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? "Mobile/tablet" : "Desktop";
