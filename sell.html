@@ -81,7 +81,11 @@
           <input type="hidden" name="enquiry_channel" value="Website direct">
           <input type="hidden" name="page_source" value="sell landing page">
           <input type="hidden" name="campaign_source" value="direct">
+          <input type="hidden" name="lead_source_guess" value="">
+          <input type="hidden" name="landing_page_url" value="">
           <input type="hidden" name="referrer_url" value="">
+          <input type="hidden" name="device_type" value="">
+          <input type="hidden" name="submitted_at" value="">
           <input class="form-honey" type="text" name="_honey" tabindex="-1" autocomplete="off">
 
           <label class="form-field">
@@ -112,6 +116,19 @@
               <option>In 1-3 months</option>
               <option>3+ months away</option>
               <option>Just exploring options</option>
+            </select>
+          </label>
+
+          <label class="form-field">
+            <span>How did you hear about us?</span>
+            <select name="how_heard_about_us">
+              <option value="">Choose one if you know</option>
+              <option>Flyer / letterbox drop</option>
+              <option>Facebook</option>
+              <option>Google search</option>
+              <option>Main website</option>
+              <option>Someone referred me</option>
+              <option>Other</option>
             </select>
           </label>
 
@@ -165,11 +182,23 @@
     var campaignSource = document.querySelector('input[name="campaign_source"]');
     var enquiryChannel = document.querySelector('input[name="enquiry_channel"]');
     var referrerField = document.querySelector('input[name="referrer_url"]');
+    var leadSourceGuess = document.querySelector('input[name="lead_source_guess"]');
+    var landingPageField = document.querySelector('input[name="landing_page_url"]');
+    var deviceField = document.querySelector('input[name="device_type"]');
+    var submittedAtField = document.querySelector('input[name="submitted_at"]');
+    var cameFromFlyer = /flyer|letterbox|letter-drop|letterdrop|qr/i.test(source || "");
     var cameFromFacebook = params.has("fbclid") || /facebook|fbclid|l\\.facebook|m\\.facebook/i.test(source || "") || /facebook|l\\.facebook|m\\.facebook/i.test(referrer);
+    var cameFromGoogle = /google/i.test(source || "") || /google/i.test(referrer);
+    var cameFromWebsite = /website|home|main-site/i.test(source || "") || /918propertysolutions\\.co\\.nz/i.test(referrer);
+    var sourceGuess = cameFromFlyer ? "Flyer / letterbox drop" : (cameFromFacebook ? "Facebook" : (cameFromGoogle ? "Google search" : (cameFromWebsite ? "Main website" : "Likely flyer / direct visit")));
 
     if (campaignSource) campaignSource.value = source || (params.has("fbclid") ? "facebook-fbclid" : (cameFromFacebook ? "facebook-referrer" : "direct"));
-    if (enquiryChannel) enquiryChannel.value = cameFromFacebook ? "Facebook" : "Website direct";
+    if (enquiryChannel) enquiryChannel.value = sourceGuess;
+    if (leadSourceGuess) leadSourceGuess.value = sourceGuess;
+    if (landingPageField) landingPageField.value = window.location.href;
     if (referrerField) referrerField.value = referrer || "No referrer captured";
+    if (deviceField) deviceField.value = /Mobi|Android|iPhone|iPad/i.test(navigator.userAgent) ? "Mobile/tablet" : "Desktop";
+    if (submittedAtField) submittedAtField.value = new Date().toLocaleString("en-NZ", { timeZone: "Pacific/Auckland" });
     if (params.get('submitted') === '1') {
       var success = document.getElementById('contact-success');
       if (success) success.hidden = false;
